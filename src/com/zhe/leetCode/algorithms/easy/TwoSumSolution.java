@@ -1,4 +1,4 @@
-package com.zhe.leetCode.algorithms;
+package com.zhe.leetCode.algorithms.easy;
 
 import java.util.Arrays;
 import java.util.HashMap;
