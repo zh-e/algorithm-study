@@ -10,3 +10,4 @@
 logs/
 *.xml.versionsBackup
 .DS_Store
+/out/
