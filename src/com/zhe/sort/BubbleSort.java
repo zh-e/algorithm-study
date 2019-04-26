@@ -7,7 +7,7 @@ public class BubbleSort {
 
     public static void main(String[] args) {
         int[] arr = {3, 7, 1, 55, 12, 65, 12, 6, 7, 32, 467, 9};
-        int[] end = insertionSort(arr);
+        int[] end = shellSort(arr);
         for (int i : arr) {
             System.out.println(i);
         }
@@ -49,16 +49,35 @@ public class BubbleSort {
     private static int[] insertionSort(int[] arr) {
         for (int i = 1, n = arr.length; i < n; i++) {
             int tmp = arr[i];
-            for (int j = i - 1; j > 0; j--) {
-                if (tmp < arr[j]) {
-                    arr[j] = arr[j - 1];
-                } else {
-                    arr[j] = tmp;
-                    break;
-                }
+            int j = i;
+            while (j > 0 && tmp < arr[j - 1]) {
+                arr[j] = arr[j - 1];
+                j--;
             }
+            arr[j] = tmp;
         }
         return arr;
     }
+
+    //希尔排序
+    private static int[] shellSort(int[] arr) {
+        int len = arr.length;
+        int k = len / 2;
+        while (k > 0) {
+            for (int i = k; i < len; i++) {
+                int j = i;
+                int tmp = arr[i];
+                while (j >= k && tmp < arr[j - k]) {
+                    arr[j] = arr[j - k];
+                    j -= k;
+                }
+                arr[j] = tmp;
+            }
+            k /= 2;
+        }
+        return arr;
+    }
+
+
 
 }
