@@ -1,6 +1,6 @@
 package com.zhe.leetCode.algorithms.easy;
 
-import com.zhe.leetCode.algorithms.base.Arrays;
+import com.zhe.leetCode.algorithms.base.ArrayUtils;
 
 /**
  * 977. Squares of a Sorted Array
@@ -12,7 +12,7 @@ public class SquaresOfASortedArraySolution {
     public static void main(String[] args) {
         int[] A = {-4, -1, 0, 3, 10};
         A = sortedSquares(A);
-        Arrays.printArry(A);
+        ArrayUtils.printArry(A);
     }
 
     private static int[] sortedSquares(int[] A) {

@@ -1,8 +1,6 @@
 package com.zhe.leetCode.algorithms.easy;
 
-import com.zhe.leetCode.algorithms.base.Arrays;
-
-import java.util.logging.Level;
+import com.zhe.leetCode.algorithms.base.ArrayUtils;
 
 /**
  * 832. Flipping an Image
@@ -15,7 +13,7 @@ public class FlippingAnImageSolution {
         int[][] A = {{1,1,0},{1,0,1},{0,0,0}};
         //int[][] A = {{1, 1, 0, 0}, {1, 0, 0, 1}, {0, 1, 1, 1}, {1, 0, 1, 0}};
         int[][] a = flipAndInvertImage(A);
-        Arrays.printArry(a);
+        ArrayUtils.printArry(a);
 
     }
 
