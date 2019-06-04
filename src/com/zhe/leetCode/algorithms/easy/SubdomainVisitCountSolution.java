@@ -26,12 +26,7 @@ public class SubdomainVisitCountSolution {
             int time = Integer.valueOf(s[0]);
             str = s[1];
             while (str != null) {
-                Integer n = resMap.get(str);
-                if(n == null) {
-                    resMap.put(str, time);
-                } else {
-                    resMap.put(str, n + time);
-                }
+                resMap.merge(str, time, Integer::sum);
                 int i = str.indexOf(".");
                 if(i > 0) {
                     str = str.substring(str.indexOf(".") + 1);
