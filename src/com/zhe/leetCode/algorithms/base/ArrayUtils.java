@@ -18,6 +18,13 @@ public final class ArrayUtils {
         System.out.println();
     }
 
+    public static void printArry(char[] arr) {
+        for(char c : arr) {
+            System.out.print(c + SPACE);
+        }
+        System.out.println();
+    }
+
     public static void printArry(int[][] arr) {
         for (int[] ints : arr) {
             for (int anInt : ints) {
