@@ -12,14 +12,21 @@ public final class ArrayUtils {
     }
 
     public static void printArry(int[] arr) {
-        for(int i : arr) {
+        for (int i : arr) {
             System.out.print(i + SPACE);
         }
         System.out.println();
     }
 
     public static void printArry(char[] arr) {
-        for(char c : arr) {
+        for (char c : arr) {
+            System.out.print(c + SPACE);
+        }
+        System.out.println();
+    }
+
+    public static void printArry(String[] arr) {
+        for (String c : arr) {
             System.out.print(c + SPACE);
         }
         System.out.println();
