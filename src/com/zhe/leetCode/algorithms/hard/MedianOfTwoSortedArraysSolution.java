@@ -1,9 +1,5 @@
 package com.zhe.leetCode.algorithms.hard;
 
-import sun.security.util.Length;
-
-import java.util.Arrays;
-
 /**
  * 有两个排序的数组nums1和nums2分别为m和n。 找到两个排序数组的中位数
  *

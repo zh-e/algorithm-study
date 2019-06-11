@@ -1,7 +1,5 @@
 package com.zhe.leetCode.algorithms.hard;
 
-import java.util.regex.Pattern;
-
 /**
  * '.' 匹配任何单个字符。
  * '*'匹配前面元素的零个或多个。
