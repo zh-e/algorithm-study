@@ -20,40 +20,40 @@ public class MinStackSolution {
 		System.out.println(minStack.getMin());
 	}
 
-}
+	static class MinStack {
 
-class MinStack {
+		private Stack<Integer> cache;
+		private Stack<Integer> min;
 
-	private Stack<Integer> cache;
-	private Stack<Integer> min;
-
-	public MinStack() {
-		cache = new Stack<>();
-		min = new Stack<>();
-	}
-
-	public void push(int x) {
-		cache.push(x);
-		if (min.isEmpty() || min.peek() >= x) {
-			min.push(x);
+		public MinStack() {
+			cache = new Stack<>();
+			min = new Stack<>();
 		}
-	}
 
-	public void pop() {
-		if (cache.isEmpty()) {
-			return;
+		public void push(int x) {
+			cache.push(x);
+			if (min.isEmpty() || min.peek() >= x) {
+				min.push(x);
+			}
 		}
-		if (min.peek().equals(cache.pop())) {
-			min.pop();
+
+		public void pop() {
+			if (cache.isEmpty()) {
+				return;
+			}
+			if (min.peek().equals(cache.pop())) {
+				min.pop();
+			}
 		}
-	}
 
-	public int top() {
-		return cache.peek();
-	}
+		public int top() {
+			return cache.peek();
+		}
 
-	public int getMin() {
-		return min.peek();
+		public int getMin() {
+			return min.peek();
+		}
+
 	}
 
 }
