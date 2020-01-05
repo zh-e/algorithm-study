@@ -1,11 +1,5 @@
 package com.zhe.leetCode.algorithms.easy;
 
-import sun.tools.jstat.Jstat;
-
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
-
 /**
  * 771
  *
