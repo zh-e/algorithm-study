@@ -1,31 +1,34 @@
 package com.zhe.sort;
 
+import java.util.Arrays;
+
 /**
  * @author zhangzhe
  */
 public class BubbleSort {
 
     public static void main(String[] args) {
-        int[] arr = {3, 7, 1, 55, 12, 65, 12, 6, 7, 32, 467, 9};
-        int[] end = shellSort(arr);
-        for (int i : arr) {
-            System.out.println(i);
-        }
+        int[] arr = {3, 5, 4, 1, 2, 6};
+        int[] end = bubbleSort(arr);
+        System.out.println(Arrays.toString(arr));
     }
 
     //冒泡排序
     private static int[] bubbleSort(int[] arr) {
-
         for (int i = 0, n = arr.length - 1; i < n; i++) {
+            boolean flag = false;
             for (int j = 0; j < n - i; j++) {
                 if (arr[j] > arr[j + 1]) {
                     int temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
+                    flag = true;
                 }
             }
+            if (!flag) {
+                break;
+            }
         }
-
         return arr;
     }
 
