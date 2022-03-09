@@ -13,7 +13,7 @@ import java.util.List;
 public class ThreeNumSumSolution {
 
     public static void main(String[] args) {
-        int[] nums = new int[]{1, -1, -1, 0};
+        int[] nums = new int[]{-1, -1, 1, 0};
 
         System.out.println(new ThreeNumSumSolution().threeSum(nums));
 
@@ -32,12 +32,13 @@ public class ThreeNumSumSolution {
                 continue;
             }
             int k = length - 1;
+            int target = -nums[i];
             for (int j = i + 1; j < length; j++) {
                 if (j > i + 1 && nums[j] == nums[j - 1]) {
                     continue;
                 }
 
-                while (j < k && nums[j] + nums[k] + nums[i] != 0) {
+                while (j < k && nums[j] + nums[k] > target) {
                     k--;
                 }
 
@@ -45,7 +46,7 @@ public class ThreeNumSumSolution {
                     break;
                 }
 
-                if (nums[j] + nums[k] + nums[i] == 0) {
+                if (nums[j] + nums[k] == target) {
                     List<Integer> line = new ArrayList<>();
                     line.add(nums[i]);
                     line.add(nums[j]);
