@@ -17,7 +17,7 @@ import java.util.LinkedList;
  * 输入：height = [4,2,0,3,2,5]
  * 输出：9
  */
-public class Trap {
+public class TrapSolution {
 
     public int trap(int[] height) {
         int n = height.length;
