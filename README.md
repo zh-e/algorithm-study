@@ -1,5 +1,8 @@
-# leetcode
-个人leetCode解题集
+# algorithm-study
+个人整理算法相关代码以及实践，主要包括以下几个模块：
+* LeetCode题解
+* 常用的设计模式
+* 排序、查找算法
+* 项目中可用的算法，例如时间轮算法、雪花算法等
 
-easy题目目录（位于com.zhe.leetCode.algorithms.easy包下）
-
+目前项目主要使用java语言进行编写，后续会追加go、python等语言的实现方式
